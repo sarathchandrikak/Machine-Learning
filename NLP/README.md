@@ -28,7 +28,7 @@ Unicode has UTF-8, UTF-16.
 2. Pattern to be executed in the given text / data
 3. Use to match anytype of specialized words like time, email, dates
 4. Quantifiers allows to mention and have control over how many times you want the character(s) in pattern to occur.
-5. Four types of quantifiers - \
+5. Four types of quantifiers
    
        The ‘?’ operator - If the pattern can have 0/any times.
        Eg: Regex that match both car & cars - 'cars?' 
