@@ -19,3 +19,21 @@ It deals with text data Different areas where text analytics is predominat in th
     
  A new standard - the Unicode standard supports all the languages in the world, both modern and the older ones.
 Unicode has UTF-8, UTF-16. 
+
+![Encoding](https://github.com/sarathchandrikak/Machine-Learning/blob/main/NLP/encoding.png)
+
+  ## Regular Expressions: Quantifiers - I
+
+1. Quanitifer is an indicator.
+2. Pattern to be executed in the given text / data
+3. Use to match anytype of specialized words like time, email, dates
+4. Quantifiers allows to mention and have control over how many times you want the character(s) in pattern to occur.
+5. Four types of quantifiers - \
+   
+       The ‘?’ operator - If the pattern can have 0/any times.
+       Eg: Regex that match both car & cars - 'cars?' 
+       'cars?' => In the sentences/text 'S' can be absent or present.
+   
+       The ‘*’ operator 
+       The ‘+’ operator 
+       The ‘{m, n}’ operator
