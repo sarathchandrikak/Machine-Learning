@@ -1,6 +1,6 @@
 # Natural Languate Processing 
 
-It deals with text data Different areas where text analytics is predominat in the current era
+It deals with text data. Different areas where text analytics is predominat in the current era
   
       1. Social Media Analytics
       2. Banking and Loan Processing
@@ -22,7 +22,9 @@ Unicode has UTF-8, UTF-16.
 
 ![Encoding](https://github.com/sarathchandrikak/Machine-Learning/blob/main/NLP/encoding.png)
 
-  ## Regular Expressions: Quantifiers
+# Regular Expressions 
+  
+#### Quantifiers
 
 1. Quanitifer is an indicator.
 2. Pattern to be executed in the given text / data
@@ -52,8 +54,28 @@ Unicode has UTF-8, UTF-16.
 | 4 | A pattern to match the word ‘hurray’. But with a minimum of two ‘r’s and a maximum of five ‘r’s. | '^hu(r{2,5})ay$' |
 | 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
 
-
     '?' is equivalent to zero or once, or {0, 1}
     '*' is equivalent to zero or more times, or {0, }
     '+' is equivalent to one or more times, or {1, }
 
+
+#### Escape Sequences
+
+The escape sequence, denoted by a backslash ‘\’, is used to escape the special meaning of the special characters. To match a question mark in whole of document '\?' is used. (this is called escaping the character).
+
+#### Regex Flags 
+
+A flag has a special meaning. A regex to ignore the case of the text then pass the 're.I' flag. Similarly, a flag with the syntax re.M enables to search in multiple lines (in case the input text has multiple lines). All these flags can be used in the re.search() function. 
+
+    re.search(pattern, string, flags=re.I | re.M)
+
+#### re.compile() function 
+
+This function stores the regular expression pattern in the cache memory and is said to result in a little faster searches.
+
+    # without re.compile() function
+    result = re.search("a+", "abc")
+
+    # using the re.compile() function
+    pattern = re.compile("a+")
+    result = pattern.search("abc")
