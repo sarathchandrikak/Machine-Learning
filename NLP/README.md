@@ -22,7 +22,7 @@ Unicode has UTF-8, UTF-16.
 
 ![Encoding](https://github.com/sarathchandrikak/Machine-Learning/blob/main/NLP/encoding.png)
 
-  ## Regular Expressions: Quantifiers - I
+  ## Regular Expressions: Quantifiers
 
 1. Quanitifer is an indicator.
 2. Pattern to be executed in the given text / data
@@ -44,7 +44,6 @@ Unicode has UTF-8, UTF-16.
        - {n}: Matches if the preceding character occurs exactly ‘n’ number of times.
 
 
-
 | S.No. | Text Input | Regular Expression | 
 |---|---|---|
 | 1 | A pattern that starts with 1 and ends with zero but has arbitrary number of 1s (zero or more) in between |  '^1(1*0*)0$'  | 
@@ -54,7 +53,7 @@ Unicode has UTF-8, UTF-16.
 | 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
 
 
-'?' is equivalent to zero or once, or {0, 1}
-'*' is equivalent to zero or more times, or {0, }
-'+' is equivalent to one or more times, or {1, }
+    '?' is equivalent to zero or once, or {0, 1}
+    '*' is equivalent to zero or more times, or {0, }
+    '+' is equivalent to one or more times, or {1, }
 
