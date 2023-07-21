@@ -30,10 +30,31 @@ Unicode has UTF-8, UTF-16.
 4. Quantifiers allows to mention and have control over how many times you want the character(s) in pattern to occur.
 5. Four types of quantifiers
    
-       The ‘?’ operator - If the pattern can have 0/any times.
-       Eg: Regex that match both car & cars - 'cars?' 
-       'cars?' => In the sentences/text 'S' can be absent or present.
+   1. The ‘?’ operator  =>  If the pattern can have 0/any times. It supports Optional preceding character. 
    
-       The ‘*’ operator 
-       The ‘+’ operator 
-       The ‘{m, n}’ operator
+   2. The ‘*’ operator  =>  If the pattern can be 0 or more times.
+       
+   3. The ‘+’ operator  =>  If the pattern can be 1 or more times.
+       
+   4. The ‘{m, n}’ operator  => If the pattern can be fixed number of times.
+
+       - {m, n}: Matches the preceding character ‘m’ times to ‘n’ times.
+       - {m, }: Matches the preceding character ‘m’ times to infinite times, i.e. there is no upper limit to the occurrence of the preceding character.
+       - {, n}: Matches the preceding character from zero to ‘n’ times, i.e. the upper limit is fixed regarding the occurrence of the preceding character.
+       - {n}: Matches if the preceding character occurs exactly ‘n’ number of times.
+
+
+
+| S.No. | Text Input | Regular Expression | 
+|---|---|---|
+| 1 | A pattern that starts with 1 and ends with zero but has arbitrary number of 1s (zero or more) in between |  '^1(1*0*)0$'  | 
+| 2 | A binary number that starts with 101 and ends with zero or more number of zeroes | '^101(0*)$' |
+| 3 | A pattern that matches numbers that are power of 10 |'^1+0*'|
+| 4 | A pattern to match the word ‘hurray’. But with a minimum of two ‘r’s and a maximum of five ‘r’s. | '^hu(r{2,5})ay$' |
+| 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
+
+
+'?' is equivalent to zero or once, or {0, 1}
+'*' is equivalent to zero or more times, or {0, }
+'+' is equivalent to one or more times, or {1, }
+
