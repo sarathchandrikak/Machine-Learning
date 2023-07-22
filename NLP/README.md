@@ -45,15 +45,6 @@ Unicode has UTF-8, UTF-16.
        - {, n}: Matches the preceding character from zero to ‘n’ times, i.e. the upper limit is fixed regarding the occurrence of the preceding character.
        - {n}: Matches if the preceding character occurs exactly ‘n’ number of times.
 
-
-| S.No. | Text Input | Regular Expression | 
-|---|---|---|
-| 1 | A pattern that starts with 1 and ends with zero but has arbitrary number of 1s (zero or more) in between |  '^1(1*0*)0$'  | 
-| 2 | A binary number that starts with 101 and ends with zero or more number of zeroes | '^101(0*)$' |
-| 3 | A pattern that matches numbers that are power of 10 |'^1+0*'|
-| 4 | A pattern to match the word ‘hurray’. But with a minimum of two ‘r’s and a maximum of five ‘r’s. | '^hu(r{2,5})ay$' |
-| 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
-
     '?' is equivalent to zero or once, or {0, 1}
     '*' is equivalent to zero or more times, or {0, }
     '+' is equivalent to one or more times, or {1, }
@@ -79,3 +70,20 @@ This function stores the regular expression pattern in the cache memory and is s
     # using the re.compile() function
     pattern = re.compile("a+")
     result = pattern.search("abc")
+
+#### Anchors, Wildcard, Character Sets
+
+* Anchors  - Used to specify the start (^) and end ($) of the string
+* Wildcard - A placeholder and can match any character in the given input string (.)
+* Character Set - A character set is similar to a wildcard because it can also be used with or without a quantifier
+
+
+
+| S.No. | Text Input | Regular Expression | 
+|---|---|---|
+| 1 | A pattern that starts with 1 and ends with zero but has arbitrary number of 1s (zero or more) in between |  '^1(1*0*)0$'  | 
+| 2 | A binary number that starts with 101 and ends with zero or more number of zeroes | '^101(0*)$' |
+| 3 | A pattern that matches numbers that are power of 10 |'^1+0*'|
+| 4 | A pattern to match the word ‘hurray’. But with a minimum of two ‘r’s and a maximum of five ‘r’s. | '^hu(r{2,5})ay$' |
+| 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
+| 6 | A regular expression that matches any string that starts with one or more ‘1’s, followed by three or more ‘0’s, followed by any number of ones (zero or more), followed by ‘0’s (from one to seven), and then ends with either two or three ‘1’s | '^1(1*)(000)0*1*0{1,7}(11|111)$' |
