@@ -1,4 +1,4 @@
-# Natural Languate Processing 
+# Natural Language Processing 
 
 It deals with text data. Different areas where text analytics is predominat in the current era
   
