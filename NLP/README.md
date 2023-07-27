@@ -77,8 +77,6 @@ This function stores the regular expression pattern in the cache memory and is s
 * Wildcard - A placeholder and can match any character in the given input string (.)
 * Character Set - A character set is similar to a wildcard because it can also be used with or without a quantifier
 
-
-
 | S.No. | Text Input | Regular Expression | 
 |---|---|---|
 | 1 | A pattern that starts with 1 and ends with zero but has arbitrary number of 1s (zero or more) in between |  '^1(1*0*)0$'  | 
@@ -87,3 +85,26 @@ This function stores the regular expression pattern in the cache memory and is s
 | 4 | A pattern to match the word ‘hurray’. But with a minimum of two ‘r’s and a maximum of five ‘r’s. | '^hu(r{2,5})ay$' |
 | 5 | A regular expression to match a term that has three or more ‘0’s followed by one or more ‘1’s| 0{3,}1+ |
 | 6 | A regular expression that matches any string that starts with one or more ‘1’s, followed by three or more ‘0’s, followed by any number of ones (zero or more), followed by ‘0’s (from one to seven), and then ends with either two or three ‘1’s | '^1(1*)(000)0*1*0{1,7}(11|111)$' |
+
+
+#### Greedy Vs Non-Greedy approach
+
+Greedy approach - When a regular expression is used to match a string, the regex greedily tries to look for the longest pattern possible in the string. 
+
+For example, when you specify the pattern 'ab{2,5}' to match the string 'abbbbb', it will look for the maximum number of occurrences of 'b' (in this case 5).
+
+    Quantifiers for Greedy approach - *, +, ?, {m, n}, {m,}, {, n}, {n}
+
+Non-Greedy approach - Also known as lazy approach. A regex stops looking for the pattern once a particular condition is satisfied. 
+
+For example, when you specify the pattern '30+' to match the string '3000', the non-greedy technique, it will only match ‘30’ because it still satisfies the pattern ‘30+’ but stops as soon as it matches the given pattern.
+
+    Quantifiers for Non-Greedy approach - *?, +?, ??, {m, n}?, {m,}?, {, n}?, {n}?
+
+#### Commonly Used RE Functions 
+
+* re.search() -> Scans through the entire text and finds match at any location
+* re.match() -> It tries to look for the begining of the string
+* re.findall() -> Find all substrings where the RE matches and returns them as a list
+* re.finditer() -> Find all subbstrings where the RE matches and returns them as an iterator
+* re.sub() -> Find all substrings where the RE matches and substitute them with the given string
