@@ -108,3 +108,26 @@ For example, when you specify the pattern '30+' to match the string '3000', the 
 * re.findall() -> Find all substrings where the RE matches and returns them as a list
 * re.finditer() -> Find all subbstrings where the RE matches and returns them as an iterator
 * re.sub() -> Find all substrings where the RE matches and substitute them with the given string
+
+
+# Basic Lexical Processing
+
+## Tokenization 
+
+A technique that’s used to split the text into smaller elements. These elements can be characters, words, sentences, or even paragraphs depending on the application.
+
+In NLTK, you also have different types of tokenisers present that you can use in different applications. The most popular tokenisers are:
+
+  * Word tokeniser splits text into different words.
+  * Sentence tokeniser splits text in different sentence.
+  * Tweet tokeniser handles emojis and hashtags that you see in social media texts
+  * Regex tokeniser lets you build your own custom tokeniser using regex patterns of your choice.
+
+## Bag of Words Representation
+
+A bag-of-words model is one of the method to represent text in a format that you can feed into machine learning algorithms. It is just the matrix from text data. Each document sits on a separate row and each word of the vocabulary has a its own column. These vocabulary words are also called as features of the text. The values inside any cell can be filled in two ways 
+
+  1. either fill the cell with the frequency of a word (i.e. a cell can have a value of 0 or more) 
+  2. fill the cell with either 0, in case the word is not present or 1, in case the word is present (binary format).
+
+
