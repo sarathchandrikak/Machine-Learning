@@ -130,4 +130,14 @@ A bag-of-words model is one of the method to represent text in a format that you
   1. either fill the cell with the frequency of a word (i.e. a cell can have a value of 0 or more) 
   2. fill the cell with either 0, in case the word is not present or 1, in case the word is present (binary format).
 
+## Stemming Lemmatization 
+
+Stemming is a rule-based technique that just chops off the suffix of a word to get its root form, which is called the 'stem'. Porter stemmer was developed in 1980 and works only on English words. Snowball stemmer is a more versatile stemmer that not only works on English words but also on words of other languages such as French, German, Italian, Finnish, Russian, and many more languages.  
+
+Lemmatization is a more sophisticated/ intelligent technique in the sense that it doesn’t just chop off the suffix of a word. Instead, it takes an input word and searches for its base word by going recursively through all the variations of dictionary words. The base word in this case is called the lemma.
+
+Stemming is much faster than the lemmatizer (which searches the dictionary to look for the lemma of a word). On the other hand, a stemmer typically gives less accurate results than a lemmatizer.
+
+
+
 
