@@ -130,7 +130,7 @@ A bag-of-words model is one of the method to represent text in a format that you
   1. either fill the cell with the frequency of a word (i.e. a cell can have a value of 0 or more) 
   2. fill the cell with either 0, in case the word is not present or 1, in case the word is present (binary format).
 
-## Stemming Lemmatization 
+## Stemming & Lemmatization 
 
 Stemming is a rule-based technique that just chops off the suffix of a word to get its root form, which is called the 'stem'. Porter stemmer was developed in 1980 and works only on English words. Snowball stemmer is a more versatile stemmer that not only works on English words but also on words of other languages such as French, German, Italian, Finnish, Russian, and many more languages.  
 
@@ -138,6 +138,12 @@ Lemmatization is a more sophisticated/ intelligent technique in the sense that i
 
 Stemming is much faster than the lemmatizer (which searches the dictionary to look for the lemma of a word). On the other hand, a stemmer typically gives less accurate results than a lemmatizer.
 
+## TF-IDF
 
+TF-IDF stands for term frequency - inverse document frequency. The TF-IDF representation, also called the TF-IDF model, takes into the account the importance of each word. In the bag-of-words model, each word is assumed to be equally important. The formula to calculate TF-IDF weight of a term in a document is:
 
+![image](https://github.com/sarathchandrikak/Machine-Learning/assets/65502906/e83ef97e-cc8a-4d9b-873f-75462ce483d8) 
 
+The log in the above formula is with base 10. Now, the tf-idf score for any term in a document is just the product of these two terms: 
+
+![image](https://github.com/sarathchandrikak/Machine-Learning/assets/65502906/f0629e09-f6bd-4428-bf83-6c1de8897c59) 
