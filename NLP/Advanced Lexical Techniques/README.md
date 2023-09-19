@@ -15,5 +15,27 @@ Edit Distance is one of the method to correct All the misspelt words to the corr
 * Deletion of a letter from the source string. To convert ‘Matt’ to ‘Mat’, delete one of the ‘t’s from the source string.
 * Substitution of a letter in the source string. To convert ‘Iran’ to ‘Iraq’, substitute ‘n’ with ‘q’
 
+### Pointwise Mutual Information
+
+To represent a group of words as a single token this method is introduced. For Eg: Indian Institute of Technology is one single word and need not be broken into individual tokes. This can be achieved by calculating the PMI score and if PMI score is more than a certain threshold, replace the terms with a single term such as Indian_Institute_of_Technology.  
+
+    PMI(x, y) = log ( P(x, y)/P(x)P(y) ) 
+    
+    PMI(z, y, x) = log [(P(z,y,x))/(P(z)P(y)P(x))]
+
+                 = log [(P(z|y, x)*P(y|x))*P(x)/(P(z)P(y)P(x))]
+
+                 = log [(P(z|y, x)*P(y|x))/([P(z)P(y))]
+
+If words are chosen as occurence context,  probability of a word is:
+
+      P(w) = Number of times given word ‘w’ appears in the text corpus/ Total number of words in the corpus
+
+If sentences are chosen as occurence context, probability of a word is:
+
+      P(w) = Number of sentences that contain ‘w’ / Total number of sentences in the corpus
  
+Please refer for a sample demo for calculating PMI for 2 words in [here](https://github.com/sarathchandrikak/Machine-Learning/blob/main/NLP/Advanced%20Lexical%20Techniques/pmi_sample.ipynb). 
+
+
  
